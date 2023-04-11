@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import React from 'react';
@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route }
 import Home from './pages';
 import Login from './pages/login';
 import SavedScholarships from './pages/savedscholarships';
+
 
 function App() {
   return (
