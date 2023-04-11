@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
+import '../styling_sheets/homePage.css';
 
   
 const Home = () => {
@@ -30,22 +31,24 @@ const Home = () => {
         {
           scholarships.map((scholarship) => (
             <div class="col">
-              <div>
               <div class = "card text-center">
                 <div class="card-block">
-                  <h4 class = "card-title">Scholarship Name</h4>
-                  <h6>Amount</h6>
+                  <h4 class = "card-title">{scholarship.Name}</h4>
+                  <h6>${scholarship.Amount}</h6>
                   <h6><b>Deadline:</b></h6>
                   <p class="card-text">
                     Short Description
                   </p>
                   </div>
                   <div class="card-footer">
-                    <Button variant="primary">Apply</Button>
-                    <Button variant="primary">Save</Button>
+                    <div class="container">
+                      <div class="buttons">
+                        <a class="btn btn-primary" href="#" role="button">Apply</a>
+                        <button class="btn btn-primary">Save</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
             </div>
           ))
         }
@@ -54,5 +57,5 @@ const Home = () => {
     </div>
   );
 };
-  
-export default Home;
+        
+export default Home;        
